@@ -1,6 +1,8 @@
 package com.lena.geek.calc;
 
-public class Calc {
+import java.io.Serializable;
+
+public class Calc implements Serializable {
     double firstArg;
     private Boolean isOperatorSelected = false;
     private Boolean isPointSelected = false;

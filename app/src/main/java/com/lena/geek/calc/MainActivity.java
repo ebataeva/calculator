@@ -1,11 +1,13 @@
 package com.lena.geek.calc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lena.geek.calc.Calc;
 
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewEquals;
     private TextView text;
     private Calc calculator;
+    private static String keyCalc = "Calc";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.button_point
         };
         init_view();
-        for (final int id:buttonIds) {
+        for (final int id : buttonIds) {
             findViewById(id).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button_equals).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(calculator.getFirstArg() != null && calculator.getSecondArg() != null) {
+                if (calculator.getFirstArg() != null && calculator.getSecondArg() != null) {
                     Log.d("calc:second Arg", calculator.getSecondArg());
                     Log.d("calc:equals", calculator.equals());
                     textViewEquals.setText(calculator.equals());
@@ -75,9 +78,11 @@ public class MainActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), "это действие недоступно", Toast.LENGTH_SHORT ).show();
 //            }
 //        });
-    };
+    }
 
-    public void init_view(){
+    ;
+
+    public void init_view() {
         textViewEquals = findViewById(R.id.equalsText);
         text = findViewById(R.id.text);
     }
@@ -86,6 +91,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "OnStart");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        calculator = (Calc) savedInstanceState.getSerializable(keyCalc);
+        text.setText(calculator.getText());
+        textViewEquals.setText(calculator.equals());
+        Log.d(TAG, "onRestore");
     }
 
     @Override
@@ -110,6 +124,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "on Destroy");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle saveInstanceState) {
+        saveInstanceState.putSerializable(keyCalc, calculator);
+        super.onSaveInstanceState(saveInstanceState);
     }
 
     @Override
