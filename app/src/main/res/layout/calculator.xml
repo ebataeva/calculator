@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/back"
+    android:columnCount="4"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorAccent"
+
+        android:textColorHint="@color/lemonTint" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/equalsText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:hint="тут ответ"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/button_divide"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_column="3"
+        android:layout_margin="4dp"
+        android:alpha="0.5"
+        android:text="@string/divide"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_1"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:text="@string/_1"
+
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_2"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:text="@string/_2"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_3"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:text="@string/_3"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_multiply"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:text="@string/multitply"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:text="@string/_4"
+
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_5"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:text="@string/_5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_6"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:text="@string/_6"
+        android:textSize="@dimen/textSize" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_minus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/minus"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:text="@string/_7"
+
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:alpha="0.5"
+
+        android:text="@string/_8"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:alpha="0.5"
+
+        android:text="@string/_9"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_plus"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_rowSpan="3"
+        android:text="@string/plus"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_columnSpan="2"
+        android:alpha="0.5"
+
+        android:text="@string/_0"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_clear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_rowSpan="3"
+        android:text="@string/clear"
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_point"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_row="4"
+        android:layout_column="3"
+        android:layout_margin="4dp"
+        android:text="@string/point"
+
+        android:textSize="@dimen/textSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_equals"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_columnSpan="3"
+        android:text="@string/button_equals" />
+
+</GridLayout>
